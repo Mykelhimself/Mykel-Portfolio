@@ -38,9 +38,13 @@
     transition: ease-in-out 0.75s;
     color: aqua;
 }
+html, body {
+    width: 100%;
+}
 
 .main {
-    padding-left: 300px;
+    margin-left: 300px;
+
 }
 
 .sidebar {
@@ -95,7 +99,6 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* margin-left: 240px; */
 }
 
 
@@ -133,13 +136,13 @@
 }
 
 .text-side h1{
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: bold;
     font-family: "poppins" sans-serif;
 }
 .text-side h1 span{
     color: #9cf369;
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-family: "poppins" sans-serif;
 }
 .text-side .web {
@@ -497,6 +500,7 @@ width: 100%;
     background-color: #fff;
     display: flex;
     align-items: center;
+    justify-content: center;
     font-size: small;
     font-weight: 400;
 }
@@ -807,7 +811,7 @@ textarea::placeholder {
 
 
 
-@media screen and (max-width: 737px) {
+@media screen and (max-width: 739px) {
     .layout {
         min-width: 100%;
     }
@@ -854,9 +858,6 @@ textarea::placeholder {
     .image-side img {
         width: 100%;
     }
-    .main {
-        padding-left: 0;
-    }
 
     /* .coll-icon {
         margin-left: 60px;
@@ -900,12 +901,12 @@ textarea::placeholder {
         display: flex;
         flex-direction: column;
     }
-    /* .main {
-        max-width: 100%;
-    } */
+    .main {
+        margin-left: 0;
+    }
 }
 
-@media screen and (min-width:767px) and (max-width:1023px) {
+/* @media screen and (min-width:767px) and (max-width:1023px) {
     .layout {
         min-width: 481px; 
         max-width: 768px;
@@ -942,17 +943,60 @@ textarea::placeholder {
         flex-direction: column;
     }
 
-}
+} */
 
 
 
 
-@media screen and (min-width:1024px) {
+/* -----------------------------------
+   TABLET + iPad (738px - 1024px)
+----------------------------------- */
+@media screen and (max-width: 1024px) {
+
+
     .layout {
-        min-width: 769px;
-        /* max-width: 1023px; */
+        min-width: 100%;
     }
-    .main {
-        padding-left: 300px;
+
+
+    #about,
+    #service,
+    #works,
+    #contact {
+        padding: 50px 40px;
+    }
+
+    .sidebar {
+        width: 300px;
+    }
+
+    .flexbox {
+        padding: 50px 20px;
+    }
+
+    .img-card {
+        display: flex;
+        justify-content: center;
+    }
+    .img-card img {
+        width: 260px;
+        
+    }
+
+    .text-side h1 {
+        font-size: 3rem;
+    }
+    .text-side h1 span {
+        font-size: 2.7rem;
+    }
+
+    .works-cont {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contact-flex {
+        gap: 40px;
     }
 }
+
+
